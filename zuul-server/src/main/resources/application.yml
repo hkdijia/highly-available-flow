@@ -4,9 +4,17 @@ eureka:
       defaultZone: http://localhost:8101/eureka/
 server:
   port: 8103
+
 spring:
   application:
     name: zuul-server
+  zipkin:
+    base-url: http://localhost:8105
+    sender:
+      type: web
+  sleuth:
+    sampler:
+      probability: 1.0
 zuul:
   routes:
     user:
