@@ -10,7 +10,7 @@ import java.util.List;
 public class Fallback implements BalanceService{
 
     @Override
-    public List<User> findAllUsers() {
+    public List<User> findAllUsers(String name) {
         User user = new User(12L, "黄凯", 24);
         ArrayList<User> list = new ArrayList<>();
         list.add(user);

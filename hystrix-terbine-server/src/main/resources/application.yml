@@ -11,4 +11,4 @@ turbine:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8888/eureka/
+      defaultZone: http://localhost:8101/eureka/

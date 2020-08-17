@@ -1,18 +1,25 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8888/eureka/
+      defaultZone: http://localhost:8101/eureka/
 server:
   port: ${PORT:8001}
 
 spring:
   application:
     name: user-server
+  zipkin:
+    base-url: http://localhost:8105
+    sender:
+      type: web
+  sleuth:
+    sampler:
+      probability: 1.0
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
     platform: mysql
-    url: jdbc:mysql://192.168.56.103:3306/eshop?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/eshop?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
     username: root
     password: root
     filters: stat
@@ -27,3 +34,5 @@ spring:
     testOnReturn: false
     poolPreparedStatements: false
     maxPoolPreparedStatementPerConnectionSize: 200
+
+

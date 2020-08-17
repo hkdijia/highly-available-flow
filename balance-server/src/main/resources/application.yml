@@ -1,14 +1,18 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8888/eureka/
+      defaultZone: http://localhost:8101/eureka/
 server:
-  port: 8003
+  port: 8102
+
 spring:
+  zipkin:
+    base-url: http://localhost:8105
   application:
     name: balance-server
-
-
-feign:
-  hystrix:
-    enabled: true
+  cloud:
+    config:
+      label: master
+      profile: dev
+      uri: http://localhost:8104/
+feign.hystrix.enabled: true
