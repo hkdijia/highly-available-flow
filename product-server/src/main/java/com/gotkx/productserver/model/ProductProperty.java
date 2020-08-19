@@ -5,7 +5,7 @@ public class ProductProperty {
     private Long id;
     private String name;
     private String value;
-    private Long product_id;
+    private Long productId;
 
     public Long getId() {
         return id;
@@ -31,15 +31,11 @@ public class ProductProperty {
         this.value = value;
     }
 
-    public Long getProduct_id() {
-        return product_id;
+    public Long getProductId() {
+        return productId;
     }
 
-    public void setProduct_id(Long product_id) {
-        this.product_id = product_id;
+    public void setProductId(Long productId) {
+        this.productId = productId;
     }
-
-
-
-
 }

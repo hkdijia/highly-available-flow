@@ -4,10 +4,13 @@ import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SleuthServerApplicationTests {
+public class SleuthServerApplicationTests {
+
+	public SleuthServerApplicationTests() {
+	}
 
 	@Test
-	void contextLoads() {
+	public void contextLoads() {
 	}
 
 }
