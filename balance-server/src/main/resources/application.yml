@@ -2,8 +2,11 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8101/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
 server:
-  port: 8102
+  port: ${PORT:8102}
 
 spring:
   application:
@@ -21,4 +24,12 @@ spring:
       label: master
       profile: dev
       uri: http://localhost:8104/
-feign.hystrix.enabled: true
+#开启监控端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
+feign:
+  hystrix:
+    enabled: true

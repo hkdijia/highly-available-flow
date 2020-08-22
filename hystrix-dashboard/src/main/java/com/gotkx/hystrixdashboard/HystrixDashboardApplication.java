@@ -1,17 +1,17 @@
-package com.gotkx.hystrixterbineserver;
+package com.gotkx.hystrixdashboard;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.netflix.turbine.EnableTurbine;
+import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 
 @SpringBootApplication
-@EnableTurbine
+@EnableHystrixDashboard
 @EnableDiscoveryClient
-public class HystrixTerbineServerApplication {
+public class HystrixDashboardApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HystrixTerbineServerApplication.class, args);
+		SpringApplication.run(HystrixDashboardApplication.class, args);
 	}
 
 }
