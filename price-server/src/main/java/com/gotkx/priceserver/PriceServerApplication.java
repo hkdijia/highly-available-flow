@@ -1,19 +1,15 @@
-package com.gotkx.userserver;
+package com.gotkx.priceserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
-@RestController
-/*@EnableHystrix
-@EnableCircuitBreaker*/
 @EnableDiscoveryClient
-public class UserServerApplication {
+public class PriceServerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(UserServerApplication.class, args);
+		SpringApplication.run(PriceServerApplication.class, args);
 	}
 
 }
