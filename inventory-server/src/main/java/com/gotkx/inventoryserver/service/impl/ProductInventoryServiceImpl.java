@@ -5,6 +5,7 @@ import com.gotkx.inventoryserver.model.ProductInventory;
 import com.gotkx.inventoryserver.service.ProductInventoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import redis.clients.jedis.JedisPool;
 
 
 @Service
@@ -12,6 +13,9 @@ public class ProductInventoryServiceImpl implements ProductInventoryService {
 
 	@Autowired
 	private ProductInventoryMapper productInventoryMapper;
+
+	@Autowired
+	private JedisPool jedisPool;
 	
 	public void add(ProductInventory productInventory) {
 		productInventoryMapper.add(productInventory); 
