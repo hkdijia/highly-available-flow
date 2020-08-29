@@ -36,7 +36,7 @@ public class BrandServiceImpl implements BrandService {
 	public void delete(Long id) {
 		brandMapper.delete(id);
 		rabbitMQSender.send(
-				RabbitQueue.DATA_CHANGE_QUEUE,"{\"event_type\":\"delete\",\"data_type\":\"brand\",\"id\": " + brand.getId() + "}"
+				RabbitQueue.DATA_CHANGE_QUEUE,"{\"event_type\":\"delete\",\"data_type\":\"brand\",\"id\": " + id + "}"
 		);
 	}
 

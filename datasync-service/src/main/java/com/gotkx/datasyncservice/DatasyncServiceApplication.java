@@ -1,17 +1,15 @@
-package com.gotkx.userserver;
+package com.gotkx.datasyncservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
-/*@EnableHystrix
-@EnableCircuitBreaker*/
 @EnableDiscoveryClient
-public class UserServerApplication {
+public class DatasyncServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(UserServerApplication.class, args);
+		SpringApplication.run(DatasyncServiceApplication.class, args);
 	}
 
 }
